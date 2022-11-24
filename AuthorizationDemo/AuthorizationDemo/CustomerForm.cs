@@ -23,7 +23,6 @@ namespace AuthorizationDemo
 
         private void signOutButton_Click(object sender, EventArgs e)
         {
-            AuthorizationForm.Show();
             this.Close();
         }
     }

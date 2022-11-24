@@ -34,6 +34,7 @@ namespace AuthorizationDemo
                     CustomerForm customerForm = new CustomerForm(username,this);
                     customerForm.Show();
                     passwordTextBox.Clear();
+                    customerForm.FormClosed += (parameter, args) => this.Show();
                     this.Hide();
                 }
                 else if (table.Rows[0].ItemArray[3].ToString() == 2.ToString())
@@ -41,6 +42,7 @@ namespace AuthorizationDemo
                     ManagerForm managerForm = new ManagerForm(username,this);
                     managerForm.Show();
                     passwordTextBox.Clear();
+                    managerForm.FormClosed += (parameter, args) => this.Show();
                     this.Hide();
                 }
                 else if (table.Rows[0].ItemArray[3].ToString() == 3.ToString())
@@ -48,6 +50,7 @@ namespace AuthorizationDemo
                     AdminForm adminForm = new AdminForm(username, this);
                     adminForm.Show();
                     passwordTextBox.Clear();
+                    adminForm.FormClosed += (parameter, args) => this.Show();
                     this.Hide();
                 }
                 else
