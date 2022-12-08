@@ -12,13 +12,10 @@ namespace AuthorizationDemo
 {
     public partial class CustomerForm : Form
     {
-        AuthorizationForm AuthorizationForm;
-
-        public CustomerForm(string username, AuthorizationForm authorizationForm)
+        public CustomerForm(string username)
         {
             InitializeComponent();
             label1.Text = username;
-            AuthorizationForm = authorizationForm;
         }
 
         private void signOutButton_Click(object sender, EventArgs e)

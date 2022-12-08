@@ -31,7 +31,7 @@ namespace AuthorizationDemo
                 string username = table.Rows[0].ItemArray[1].ToString();
                 if (table.Rows[0].ItemArray[3].ToString() == 1.ToString())
                 {
-                    CustomerForm customerForm = new CustomerForm(username,this);
+                    CustomerForm customerForm = new CustomerForm(username);
                     customerForm.Show();
                     passwordTextBox.Clear();
                     customerForm.FormClosed += (parameter, args) => this.Show();
@@ -39,7 +39,7 @@ namespace AuthorizationDemo
                 }
                 else if (table.Rows[0].ItemArray[3].ToString() == 2.ToString())
                 {
-                    ManagerForm managerForm = new ManagerForm(username,this);
+                    ManagerForm managerForm = new ManagerForm(username);
                     managerForm.Show();
                     passwordTextBox.Clear();
                     managerForm.FormClosed += (parameter, args) => this.Show();
@@ -47,7 +47,7 @@ namespace AuthorizationDemo
                 }
                 else if (table.Rows[0].ItemArray[3].ToString() == 3.ToString())
                 {
-                    AdminForm adminForm = new AdminForm(username, this);
+                    AdminForm adminForm = new AdminForm(username);
                     adminForm.Show();
                     passwordTextBox.Clear();
                     adminForm.FormClosed += (parameter, args) => this.Show();
